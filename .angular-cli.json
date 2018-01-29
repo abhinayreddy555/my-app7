@@ -10,7 +10,7 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "Web1.config"
+        "Web.config"
       ],
       "index": "index.html",
       "main": "main.ts",
