@@ -1,21 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { FwModule } from '../fw/fw.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './app.header';
-import { FooterComponent } from './app.footer';
+
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent
+    
+
+
+
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
+    FwModule,
     AppRoutingModule
   ],
   providers: [],

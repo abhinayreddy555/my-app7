@@ -1,14 +1,30 @@
-import { Component } from '@angular/core';
-import { HeaderComponent } from './app.header';
-import { FooterComponent } from './app.footer';
+import { Component, OnInit } from '@angular/core';
+
+import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/framework-config.service';
 
 @Component({
   selector: 'abhi-root',
-  template: `<app-header></app-header>
-<app-footer></app-footer>`,
-  //templateUrl: './app.component.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'abhi';
+export class AppComponent  {
+
+  constructor(private frameworkConfigService: FrameworkConfigService) {
+
+    let config: FrameworkConfigSettings = {
+      socialIcons: [
+        { imageFile: 'assets/Images/social-fb-bw.png', alt: 'Facebook', link: 'http://www.facebook.com' },
+        { imageFile: 'assets/Images/social-google-bw.png', alt: 'Google +', link: 'http://www.google.com' },
+        { imageFile: 'assets/Images/social-twitter-bw.png', alt: 'Twitter', link: 'http://www.twitter.com' }
+      ],
+      showLanguageSelector: true,
+      showUserControls: true,
+      showStatusBar: true,
+      showStatusBarBreakpoint: 800
+    };
+
+    frameworkConfigService.configure(config);
+
+  }
 }
+
