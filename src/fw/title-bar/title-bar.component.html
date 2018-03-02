@@ -1,5 +1,8 @@
 <div *screenBelowLarge class="title-bar-small">
-  <span class="glyphicon glyphicon-menu-hamburger"></span>
+  <span class="glyphicon glyphicon-menu-hamburger"
+        (click)="menuService.toggleLeftSideMenu()">
+
+  </span>
   <div class="small-image-holder">
     <img class="small-image" src="assets/Images/logo.png">
   </div>
@@ -9,6 +12,8 @@
   <img src="assets/Images/logo.png" alt="Green Nations" />
   <div class="menu-area">
     <abhi-top-bar></abhi-top-bar>
-    <abhi-menu></abhi-menu>
+    <abhi-menu  *ngIf="!menuService.isVertical">
+
+    </abhi-menu>
   </div>
 </div>

@@ -17,6 +17,9 @@
   margin-left: 16px;
   width: auto;
 }
+:host(.verticl-menu.in-popup){
+  padding-left:16px;
+}
 
 :host(.vertical-menu) {
   display: block;
@@ -35,6 +38,9 @@ span {
   font-size: 14px;
   margin-right: 4px;
   margin-left: 8px;
+}
+.glyphicon-menu-left, .glyphicon-menu-right, .glyphicon-menu-down {
+  float: right;
 }
 
 .menu-item {

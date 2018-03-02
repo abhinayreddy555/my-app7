@@ -7,35 +7,29 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CountriesComponent } from './countries/countries.component';
 import { SettingsComponent } from './settings/settings.component';
 import { appRoutes } from './app.routing';
-
-
-
-
-
-
+import { CountryDetailComponent } from './country-detail/country-detail.component';
+import { CountryListComponent } from './country-list/country-list.component';
+import { CountryMaintainanceComponent } from './country-maintainance/country-maintainance.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    CountriesComponent,
-    SettingsComponent,
-    
-   
-    
-    
-
-
-
+    CountryDetailComponent,
+    CountryListComponent,
+    CountryMaintainanceComponent,
+    SettingsComponent
+  
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     FwModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
