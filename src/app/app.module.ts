@@ -12,8 +12,11 @@ import { appRoutes } from './app.routing';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { CountryMaintainanceComponent } from './country-maintainance/country-maintainance.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
+import { UserService } from './services/user.services';
+import { UserApi } from '../fw/users/user-api';
+import { AuthGuard } from './services/auth-guard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     CountryDetailComponent,
     CountryListComponent,
     CountryMaintainanceComponent,
-    SettingsComponent
+    SettingsComponent,
+    AuthenticatedUserComponent,
+    //SignInComponent,
+    //RegisterUserComponent
   
   ],
   imports: [
@@ -32,7 +38,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    UserService,
+    AuthGuard,
+    {provide:UserApi,useExisting:UserService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
