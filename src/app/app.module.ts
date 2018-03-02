@@ -3,9 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FwModule } from '../fw/fw.module';
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CountriesComponent } from './countries/countries.component';
+import { SettingsComponent } from './settings/settings.component';
+import { appRoutes } from './app.routing';
+
 
 
 
@@ -15,6 +20,12 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
+    CountriesComponent,
+    SettingsComponent,
+    
+   
+    
     
 
 
@@ -25,7 +36,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     FwModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

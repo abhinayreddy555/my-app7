@@ -1,7 +1,14 @@
-<div class="title-bar">
+<div *screenBelowLarge class="title-bar-small">
+  <span class="glyphicon glyphicon-menu-hamburger"></span>
+  <div class="small-image-holder">
+    <img class="small-image" src="assets/Images/logo.png">
+  </div>
+  <span class="glyphicon glyphicon-option-vertical"></span>
+</div>
+<div *screenLarge class="title-bar user-title-bar">
   <img src="assets/Images/logo.png" alt="Green Nations" />
   <div class="menu-area">
-    <!--<ps-top-barr></ps-top-barr>-->
-
+    <abhi-top-bar></abhi-top-bar>
+    <abhi-menu></abhi-menu>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MenuService } from '../fw/services/menu.service';
+import{initialMenuItems}from'./app.menu'
 import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/framework-config.service';
 
 @Component({
@@ -7,9 +8,10 @@ import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
+export class AppComponent {
 
-  constructor(private frameworkConfigService: FrameworkConfigService) {
+  constructor(private frameworkConfigService: FrameworkConfigService,
+    private menuService: MenuService) {
 
     let config: FrameworkConfigSettings = {
       socialIcons: [
@@ -24,7 +26,7 @@ export class AppComponent  {
     };
 
     frameworkConfigService.configure(config);
-
+    menuService.items = initialMenuItems;
   }
 }
 
