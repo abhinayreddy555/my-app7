@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FwModule } from '../fw/fw.module';
@@ -17,6 +17,9 @@ import { AuthenticatedUserComponent } from './authenticated-user/authenticated-u
 import { UserService } from './services/user.services';
 import { UserApi } from '../fw/users/user-api';
 import { AuthGuard } from './services/auth-guard.service';
+import { AppDataService } from './services/app-data.service';
+import { CountryPanelComponent } from './panels/country-panel/country-panel.component';
+import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +29,8 @@ import { AuthGuard } from './services/auth-guard.service';
     CountryMaintainanceComponent,
     SettingsComponent,
     AuthenticatedUserComponent,
-    //SignInComponent,
-    //RegisterUserComponent
+    ImagePanelComponent,
+    CountryPanelComponent
   
   ],
   imports: [
@@ -39,9 +42,11 @@ import { AuthGuard } from './services/auth-guard.service';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
+    AppDataService,
     UserService,
     AuthGuard,
-    {provide:UserApi,useExisting:UserService}],
+    { provide: UserApi, useExisting: UserService }],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

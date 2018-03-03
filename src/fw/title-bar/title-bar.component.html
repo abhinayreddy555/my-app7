@@ -6,6 +6,7 @@
   <div class="small-image-holder">
     <img class="small-image" src="assets/Images/logo.png">
   </div>
+  <!--<span class="glyphicon glyphicon-log-out" (click)="signOut()" matTooltip="Sign Out!"></span>-->
   <span class="glyphicon glyphicon-option-vertical"></span>
 </div>
 <div *screenLarge class="title-bar user-title-bar">
@@ -13,7 +14,6 @@
   <div class="menu-area">
     <abhi-top-bar></abhi-top-bar>
     <abhi-menu  *ngIf="!menuService.isVertical">
-
     </abhi-menu>
   </div>
 </div>

@@ -7,7 +7,8 @@
 
 :host(.vertical-menu) {
   display: inline-block;
-  width: 200px;
+  max-width: 200px;
+  min-width: 200px;
   padding-left: 4px;
   flex-grow: 0;
   background-color: #555;
@@ -23,10 +24,12 @@ ul {
 li {
   display: inline;
 }
-button{
-  margin-top:20px;
+
+button {
+  margin-top: 20px;
 }
-button.horizontal{
-  margin-left:20px;
-  margin-bottom:2px;
+
+button.horizontal {
+  margin-left: 20px;
+  margin-bottom: 2px;
 }
