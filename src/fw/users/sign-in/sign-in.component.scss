@@ -4,8 +4,7 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  //ToDpo:Add background image latter after isssue ges resolved https://github.com/angular/angular-cli/issues/9642
-  //background: url('./assets/Images/mountains.jpg');
+  background-image: url(/assets/Images/mountains.jpg);
   background-position: center center;
   background-size: cover;
 }

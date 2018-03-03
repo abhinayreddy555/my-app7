@@ -1,7 +1,7 @@
 
 .image-holder {
     flex-grow: 1;
-    background-image: url(/assets/Images/indiaFlag.jpg);
+    background-image: url(/assets/Images/green.jpg);
     background-position:  center center;
     background-size: cover;
     height: 150px;
