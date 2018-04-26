@@ -21,6 +21,7 @@ export const appRoutes: Routes = [
           { path: 'dashboard', component: DashboardComponent },
           { path: 'country-list/:count', component: CountryListComponent },
           { path: 'country-detail/:id/:operation', component: CountryDetailComponent },
+          { path: 'country-detail/singleCountry/:display/:countryName', component: CountryListComponent },
           { path: 'country-maint', component: CountryMaintainanceComponent },
           { path: 'settings', component: SettingsComponent },
         ]

@@ -12,31 +12,31 @@ export let initialMenuItems: Array<MenuItem> = [
     icon: 'glyphicon-flag',
     route: null,
     submenu: [
-      {
-        text: 'Select',
-        icon: 'glyphicon-expand',
-        route: null,
-        submenu: [
-          {
-            text: 'USA',
-            icon: 'glyphicon-flag',
-            route: '/authenticated/country-detail/USA',
-            submenu: null
-          },
-          {
-            text: 'India',
-            icon: 'glyphicon-flag',
-            route: '/authenticated/country-detail/India',
-            submenu: null
-          },
-          {
-            text: 'Switzerland',
-            icon: 'glyphicon-flag',
-            route: '/authenticated/country-detail/Switzerland',
-            submenu: null
-          }
-        ]
-      },
+      //{
+      //  text: 'Select',
+      //  icon: 'glyphicon-expand',
+      //  route: null,
+      //  submenu: [
+      //    {
+      //      text: 'USA',
+      //      icon: 'glyphicon-flag',
+      //      route: '/authenticated/country-detail/singleCountry/true/USA',
+      //      submenu: null
+      //    },
+      //    {
+      //      text: 'India',
+      //      icon: 'glyphicon-flag',
+      //      route: '/authenticated/country-detail/singleCountry/true/India',
+      //      submenu: null
+      //    },
+      //    {
+      //      text: 'Switzerland',
+      //      icon: 'glyphicon-flag',
+      //      route: '/authenticated/country-detail/singleCountry/true/Switzerland',
+      //      submenu: null
+      //    }
+      //  ]
+      //},
       {
         text: 'Top 3',
         icon: 'glyphicon-flag',
